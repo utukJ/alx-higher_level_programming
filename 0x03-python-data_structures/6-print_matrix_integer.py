@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-from tkinter import W
-
-
 def print_matrix_integer(matrix=[[]]):
     for row in matrix:
         print(("{} "*len(row))[:-1].format(*row))
