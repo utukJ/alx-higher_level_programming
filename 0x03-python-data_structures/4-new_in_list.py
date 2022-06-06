@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def replace_in_list(my_list, idx, element):
+def new_in_list(my_list, idx, element):
     """replaces element at index idx in my_list"""
     my_list_copy = my_list[:]
     if 0 <= idx < len(my_list_copy):
@@ -9,5 +9,6 @@ def replace_in_list(my_list, idx, element):
 
 
 if __name__ == "__main__":
-    my_list = [1, 2, 3, 4, 5]
-    print(replace_in_list(my_list, 3, 11))
+    my_list = [3, 4, 5, 6, 7, 8, 9, 12]
+    print(new_in_list(my_list, 3, 11))
+    print(my_list)
