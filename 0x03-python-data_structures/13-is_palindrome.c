@@ -1,8 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
 
-
-
 /**
  * reversed_linked_list - returns a reversed copy of a linked list 
  * 
@@ -48,7 +46,11 @@ int compare_linked_lists(const listint_t *h1, const listint_t *h2)
     return (h1 == NULL && h2 == NULL);
 }
 
-int is_palindrome(listint_t **h)
+int is_palindrome(listint_t **head)
 {
-    return compare_linked_lists(*h, reversed_linked_list(*h));
+    listint_t *reversed = reversed_linked_list(*head);
+    int result = compare_linked_lists(*head, reversed);
+    free_listint(reversed);
+
+    return result;
 }
