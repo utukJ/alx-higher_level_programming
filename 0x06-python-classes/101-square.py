@@ -81,4 +81,11 @@ class Square:
         """
         prints square
         """
-        self.my_print()
+        if self.size == 0:
+            return ""
+        result = ""
+        result += "\n" * self.position[1]
+        for i in range(self.size):
+            result += " " * self.position[0]
+            result += "#" * self.size + "\n"
+        return result
