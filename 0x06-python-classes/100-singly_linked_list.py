@@ -29,4 +29,34 @@ class Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
-    def 
+
+class SinglyLinkedList:
+    """defines a singly linked list"""
+
+    def __init__(self):
+        self.__head = None
+
+    def sorted_insert(self, value):
+        if self.__head is None:
+            self.__head = Node(value)
+            return
+        tmp = self.__head
+        prev = None
+        while tmp is not None:
+            if tmp.data >= value:
+                if prev is None:
+                    self.__head = Node(value, next_node=tmp)
+                else:
+                    new = Node(value, next_node=tmp)
+                    prev.next_node = new
+                return
+            tmp, prev = tmp.next_node, tmp
+        prev.next_node = Node(value)
+
+    def __str__(self):
+        result = ""
+        tmp = self.__head
+        while tmp is not None:
+            result += str(tmp.data) + '\n'
+            tmp = tmp.next_node
+        return result[:-1]
