@@ -1,0 +1,36 @@
+#!/usr/bin/python3
+"""Scalar matrix division"""
+
+
+def matrix_divided(matrix, div):
+    """Divides all elements of matrix by div
+
+    Args:
+        matrix (list): list of lists of integers or floats
+        div (int, float): divisor (must not be 0)
+
+    Returns:
+        list: new matrix after division
+    """
+    if not isinstance(matrix, list) or\
+            not all(isinstance(row, list) for row in matrix) or\
+            len(matrix) == 0:
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+
+    row_len = len(matrix[0])
+    if not all(len(row) == row_len for row in matrix):
+        raise TypeError("Each row of the matrix must have the same size")
+
+    if type(div) not in (int, float):
+        raise TypeError("div must be a number")
+
+    rmatrix = []
+    for row in matrix: 
+        rrow = []
+        for elem in row:
+            if type(elem) not in (int, float):
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            row.append(round(elem/div, 2))
+        rmatrix.append(rrow[:])
+
+    return rmatrix
