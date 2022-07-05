@@ -4,7 +4,7 @@ more class base
 """
 
 
-from 7-base_geometry import BaseGeometry
+BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 
 class Rectangle(BaseGeometry):
