@@ -2,6 +2,6 @@
 """Task 3"""
 
 
-def is_kind_of_class(obj, a_class):
+def inherits_from(obj, a_class):
     """returns bool indicating if obj is instance of a_class"""
     return issubclass(obj, a_class)
