@@ -28,8 +28,8 @@ class Square(BaseGeometry):
     """defines a Square"""
     def __init__(self, size):
         """construtor method"""
+        BaseGeometry.integer_validator(self, "size", size)
         self.__size = size
-        BaseGeometry.integer_validator(self, "size")
 
     def area(self):
         return self.__size ** 2
