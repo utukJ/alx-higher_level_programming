@@ -24,12 +24,8 @@ class Rectangle(BaseGeometry):
         return ("[Rectangle] " + str(self.__width) + "/" + str(self.__height))
 
 
-class Square(BaseGeometry):
+class Square(Rectangle):
     """defines a Square"""
     def __init__(self, size):
         """construtor method"""
-        BaseGeometry.integer_validator(self, "size", size)
-        self.__size = size
-
-    def area(self):
-        return self.__size ** 2
+        super().__init__(self, size, size)
