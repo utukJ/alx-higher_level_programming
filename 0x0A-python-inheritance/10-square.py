@@ -29,3 +29,4 @@ class Square(Rectangle):
     def __init__(self, size):
         """construtor method"""
         super().__init__(size, size)
+        self.__size = size
