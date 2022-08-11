@@ -2,4 +2,4 @@
 -- id == 89
 -- name == Holberton School
 -- db name will be passed as arg to mysql cmd
-INSERT INTO `first_table` (`id`, `name`) VALUES (89, "Holberton School");
+INSERT INTO `first_table` (`id`, `name`) VALUES (89, "Best School");
