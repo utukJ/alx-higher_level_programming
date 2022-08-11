@@ -3,4 +3,4 @@
 -- db name will be passed as argument of mysql cmd
 -- If table 'first_table' already exists, should not fail.
 -- Not allowed to use SELECT or SHOW
-CREATE TABLE IF NOT EXISTS first_table (id INT, name VARCHAR(256));
+SHOW CREATE TABLE first_table
